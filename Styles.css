@@ -1,20 +1,30 @@
 /*Creacion del estilo para el html*/
 html { 
     height: 100%;
-  }
-  /*Creacion del estilo para el body*/
+}
+/*Creacion del estilo para el body*/
 body {
-    display: inline-block;
-    margin: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    text-align: center;
-    font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
-    background-color: hsl(210,50%,20%);
-     background: url(bg.png), linear-gradient(90deg, hsl(210,40%,28%), hsl(210,40%,20%), hsl(210,40%,12%));
-     background-image: url("C:/laragon/www/Final-Project-ISC/img/principal.gif");
-     background-size: 1920px 1000px;
-     }
-   }
+ display: inline-block;
+ margin: center;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+ background-color: hsl(210,50%,20%);
+ background: url(bg.png), linear-gradient(90deg, hsl(210,40%,28%), hsl(210,40%,20%), hsl(210,40%,12%));
+ background-image: url("C:/laragon/www/Final-Project-ISC/img/principal.gif");
+ background-size: 1920px 1000px;
+ }
+}
+.txt[contenteditable] {
+    outline: none;
+  }
+  /*Creacion del estilo para box*/
+  #box {
+    padding: 50px;
+    font-size: 5em;
+    font-weight: bold;
+  }
+
 
