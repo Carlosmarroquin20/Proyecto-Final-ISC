@@ -56,3 +56,15 @@ button{
     width: auto;
     margin: auto;
 }
+/*Creacion para los estilos de los botones*/
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #a945c7;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.3s;
+    }
