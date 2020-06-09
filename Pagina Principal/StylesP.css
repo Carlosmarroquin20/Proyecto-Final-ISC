@@ -1,0 +1,9 @@
+
+/*Estilo para el h1*/
+h1 {
+    font-family: consolas;  
+    -webkit-animation: bounce .3s ease infinite alternate;
+    font-size: 80px;
+    color: #FFF;
+    text-align: center;
+    line-height: 100px;
