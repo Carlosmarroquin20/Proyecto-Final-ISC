@@ -26,5 +26,10 @@ padding: 50px;
 font-size: 5em;
 font-weight: bold;
 }
-
+/*Creacion del estilo para txt*/
+.txt {
+  color: hsla(0,0%,0%,0);
+  text-shadow: #fff 0 0 60px;
+  transition: text-shadow 2s cubic-bezier(0, 1, 0, 1);
+ }
 
