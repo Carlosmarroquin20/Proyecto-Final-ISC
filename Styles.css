@@ -34,3 +34,7 @@ font-weight: bold;
  }
  @-moz-document url-prefix() { .txt { text-shadow: #fff 0 0 20px; } } /* FF fix */
 
+ #box:hover .txt {
+    text-shadow: #fff 0 0 5px;
+    transition: text-shadow 1s cubic-bezier(0, 0.75, 0, 1);
+}
