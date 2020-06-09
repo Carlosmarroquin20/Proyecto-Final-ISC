@@ -35,3 +35,8 @@ h1 {
                    0 30px 30px rgba(0, 0, 0, .3);
     }
   }
+  /*Creacion del estilo para el body*/
+  body{
+      background-image: url("C:/laragon/www/Final-Project-ISC/img/fondodep.jpg");
+      background-size: 1700px 1000px;
+  }
