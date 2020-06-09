@@ -45,7 +45,14 @@ font-weight: bold;
     text-shadow: #a945c7 0 0 5px;
     transition: text-shadow 1s cubic-bezier(0, 1, 0, 1);
       }
-      #box:hover .♥ {
-		text-shadow: #a945c7 0 0 100px;
-		transition: text-shadow 2s cubic-bezier(0, 0.75, 0, 1);
+#box:hover .♥ {
+ text-shadow: #a945c7 0 0 100px;
+ transition: text-shadow 2s cubic-bezier(0, 0.75, 0, 1);
+}
+@-moz-document url-prefix() { #box:hover .♥ { text-shadow: red 0 0 20px; } } /* FF fix */
+/*Creacion del estilo para button*/
+button{
+    padding: auto;
+    width: auto;
+    margin: auto;
 }
