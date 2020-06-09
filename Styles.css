@@ -38,3 +38,10 @@ font-weight: bold;
     text-shadow: #fff 0 0 5px;
     transition: text-shadow 1s cubic-bezier(0, 0.75, 0, 1);
 }
+/*Creacion del estilo para txt dentro de box*/
+.♥ {
+    margin: 0 10px;
+    color: hsla(0,0%,0%,0);
+    text-shadow: #a945c7 0 0 5px;
+    transition: text-shadow 1s cubic-bezier(0, 1, 0, 1);
+      }
