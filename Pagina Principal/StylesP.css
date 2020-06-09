@@ -67,3 +67,19 @@ p{
     transition: 0.5s;
     background-image: url("C:/Users/USUARIO/Desktop/Trabajo_Colaborativo/img/fondodep.jpg");
     }
+    .btn-neon:hover{
+        background: gray;
+        box-shadow: 0 0 10px gray, 0 0 40px gray, 0 0 80px gray;
+        transition-delay: 1s;
+        }
+        .btn-neon span{
+            position: absolute;
+            display: block;
+                   }
+            #span1{
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent,#a945c7);
+            }
