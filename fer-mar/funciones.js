@@ -155,4 +155,20 @@ function Enemigo(x, y) {
 			if (imgAni < 4) {
                 ctx.drawImage(imgOvni, 0   , 0   , 32  , 32  , this.x, this.y, 35  , 35);
                 
-                
+                //Dibujado de: imgfile, xini, yini, wimg, himg, xpos  , ypos  , wrez, hrez
+			} else if(imgAni < 8) {
+				ctx.drawImage(imgOvni, 32, 0, 32, 32, this.x, this.y, 35, 35);
+			} else if(imgAni < 12) {
+				ctx.drawImage(imgOvni, 64, 0, 32, 32, this.x, this.y, 35, 35);
+			} else if(imgAni > 11) {
+				ctx.drawImage(imgOvni, 0, 0, 32, 32, this.x, this.y, 35, 35);
+				imgAni = 0;
+			}
+		} else {
+			ctx.fillStyle = "black";
+			ctx.fillRect(this.x, this.y, 35, 30);
+		}
+
+	};
+}
+
