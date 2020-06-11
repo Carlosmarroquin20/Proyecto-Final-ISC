@@ -237,3 +237,12 @@ function gameOver() {
 	endGame = false;
 	clearTimeout(disparoEnemigo);
 }
+//Funcion del puntaje
+function score() {
+	ctx.save();
+	ctx.fillStyle = "white";
+	ctx.clearRect(0, 0, canvas.width, 20);
+	ctx.font = "bold 12px Courier";
+	ctx.fillText("SCORE: " + puntos, 200, 20);
+	ctx.restore();
+}
