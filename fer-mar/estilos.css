@@ -99,3 +99,8 @@ p{
         height: 100%;
         background: linear-gradient(180deg, transparent,#a945c7);
         }
+        .btn-neon:hover #span2{
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+        }
