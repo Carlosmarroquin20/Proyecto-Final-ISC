@@ -255,3 +255,7 @@ function municiones() {
 	ctx.fillText("AMMUNITION: " + municion, 300, 20);
 	ctx.restore();
 }
+//Verificacion de los bordes y pulsaciones de tecla espacio para disparos
+function verifica() {
+	if (tecla[teclaDerecha]) x += 5;
+	if (tecla[teclaIzquierda]) x -= 5;
