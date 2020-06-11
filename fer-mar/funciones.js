@@ -31,3 +31,17 @@ window.onload = function () {
 		}
 	}
 }
+//Listener, Animaciones, correcta funcion de los distintos navegadores
+window.requestAnimationFrame = (function () {
+	return window.requestAnimationFrame ||
+		window.webkitRequestAnimationFrame ||
+		window.mozRequestAnimationFrame ||
+		function (callback) { window.setTimeout(callback, 20); }
+})();
+document.addEventListener("keydown", function (e) {
+	teclaPulsada = e.keyCode;
+	tecla[e.keyCode] = true;
+});
+document.addEventListener("keyup", function (e) {
+	tecla[e.keyCode] = false;
+});
