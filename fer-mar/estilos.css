@@ -76,4 +76,7 @@ p{
         height: 2px;
         background: linear-gradient(90deg, transparent,#a945c7);
         }
-        
+        .btn-neon:hover #span1{
+        left: 100%;
+        transition: 0.5s;
+        }
