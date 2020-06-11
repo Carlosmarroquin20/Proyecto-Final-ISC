@@ -135,3 +135,24 @@ function Enemigo(x, y) {
         
         //Retraso
 		if (this.ciclos > 20) {
+            //Saltos de los enemigos
+			if (this.veces > this.num) {
+				this.dx *= -1;
+				this.veces = 0;
+				this.num = 30;
+				this.y += 40;
+				this.dx = (this.dx > 0) ? this.dx++ : this.dx--;
+			} else {
+				this.x += this.dx;
+			}
+			this.veces++;
+			this.ciclos = 0;
+			this.figura = !this.figura;
+		} else {
+			this.ciclos++;
+		}
+		if (this.vive) {
+			if (imgAni < 4) {
+                ctx.drawImage(imgOvni, 0   , 0   , 32  , 32  , this.x, this.y, 35  , 35);
+                
+                
