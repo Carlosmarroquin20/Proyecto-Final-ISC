@@ -24,9 +24,11 @@ body { background-color: #000; }
 }
 
 .pointer {
-	height: 20px;
-	margin-top: 20px;
+	background-color: #003;
+	height: 30px;
+	margin-top: 30px;
 	border-bottom: 0px;
+	color: #fc0;
 	font-size: 20px;
 	text-align: center;
 	padding: 10px 0px;
