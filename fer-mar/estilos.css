@@ -48,3 +48,15 @@ p{
     font-family: consolas;
     margin: 20px;
     }
+    .btn-neon{
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: white;
+        letter-spacing: 4px;
+        text-decoration: none;
+        font-size: 20px;
+        overflow: hidden;
+        transition: 0.5s;
+        background-color: rgb(39, 61, 185);
+        }
