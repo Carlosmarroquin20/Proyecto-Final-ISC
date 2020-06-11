@@ -107,4 +107,16 @@ function nave(x) {
 			ctx.drawImage(imgNave,0   , 0   , 32  , 32  , this.x, this.y, 35  , 35);
 			imgAni2 = imgAni2 + 1;
 			imgAni = imgAni + 1;
-			checarBalas();
+            checarBalas();
+            //Verificacion de balas
+		} else if(imgAni2 < 10) {
+			ctx.drawImage(imgNave,32  , 0   , 32  , 32  , this.x, this.y, 35  , 35);
+			imgAni2 = imgAni2 + 1;
+			imgAni = imgAni + 1;
+		} else{
+			ctx.drawImage(imgNave,32  , 0   , 32  , 32  , this.x, this.y, 35  , 35);
+			imgAni2 = 0;
+		}
+		
+	};
+}
