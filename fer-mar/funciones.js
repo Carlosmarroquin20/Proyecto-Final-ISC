@@ -68,3 +68,13 @@ var endGame = false;
 var disparoEnemigo;
 var tiempoDisparo = 400;
 var puntos = 0;
+
+//Balas de la nave
+function Bala(x, y, w) {
+	this.x = x;
+	this.y = y;
+	this.w = w;
+	this.dibuja = function () {
+		ctx.save();
+		ctx.fillStyle = "green";
+		ctx.fillRect(this.x, this.y, this.w, this.w);
