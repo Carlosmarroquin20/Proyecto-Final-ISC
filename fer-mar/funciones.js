@@ -246,3 +246,12 @@ function score() {
 	ctx.fillText("SCORE: " + puntos, 200, 20);
 	ctx.restore();
 }
+//Funcion de las municiones
+function municiones() {
+	ctx.save();
+	ctx.fillStyle = "white";
+	ctx.clearRect(0, 20, canvas.width, 20);
+	ctx.font = "bold 12px Courier";
+	ctx.fillText("AMMUNITION: " + municion, 300, 20);
+	ctx.restore();
+}
