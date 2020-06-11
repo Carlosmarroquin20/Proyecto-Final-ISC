@@ -308,4 +308,17 @@ function pinta() {
 			balasEnemigas_array[i].dispara();
 			if (balasEnemigas_array[i].y > canvas.height) balasEnemigas_array[i] = null;
 		}
+    }
+    //Enemigos
+	numEnemigos = 0;
+	for (var i = 0; i < ovnis_array.length; i++) {
+		if (ovnis_array[i] != null) {
+			ovnis_array[i].dibuja();
+			if (ovnis_array[i].y == nave.y) {
+				gameOver();
+			}
+			numEnemigos++;
+		}
 	}
+	if (numEnemigos == 0) gameOver();
+}
