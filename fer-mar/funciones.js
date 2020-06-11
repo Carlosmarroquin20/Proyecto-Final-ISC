@@ -96,3 +96,15 @@ function Bala(x, y, w) {
 
 //Objetos de Nave y animaciones
 function nave(x) {
+    //Posicion de la nave
+	this.x = x;
+	this.y = 465;
+	this.w = 30;
+	this.h = 30;
+	this.dibuja = function (x) {
+		this.x = x;
+		if(imgAni2 < 5){
+			ctx.drawImage(imgNave,0   , 0   , 32  , 32  , this.x, this.y, 35  , 35);
+			imgAni2 = imgAni2 + 1;
+			imgAni = imgAni + 1;
+			checarBalas();
