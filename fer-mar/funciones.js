@@ -289,3 +289,16 @@ function checarBalas(){
 			gameOver();
 	}
 }
+//Refresh de Canva
+function pinta() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	score();
+	municiones();
+	nave.dibuja(x);
+	//Balas
+	for (var i = 0; i < 100; i++) {
+		if (balas_array[i] != null) {
+			balas_array[i].dibuja();
+			if (balas_array[i].y < 0) balas_array[i] = null;
+		}
+	}
