@@ -16,4 +16,9 @@ window.onload = function () {
             //Funcion para la cantidad de Ovnis en pantalla
 			imgOvni.onload = function () {
 				for (var i = 0; i < 6; i++) {
-					for (var j = 0; j < 10; j++) 
+                    for (var j = 0; j < 10; j++)
+                    //Movimiento en los ejes de los enemigos
+					{
+						ovnis_array.push(new Enemigo(100 + 40 * j, 30 + 45 * i));
+					}
+				} 
