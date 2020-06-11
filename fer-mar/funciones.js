@@ -269,4 +269,9 @@ function verifica() {
 			balas_array.push(new Bala(nave.x + 12, nave.y - 3, 5));
 			(municion >0)?municion = municion - 1 : false;
 			tecla[teclaEspacio] = false;
-			disparaEnemigo();
+            disparaEnemigo();
+            /*Tiempo de disparo*/
+			setTimeout(function(){tiempoBala = true;},150);
+		}
+	}
+}
