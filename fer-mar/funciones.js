@@ -77,4 +77,8 @@ function Bala(x, y, w) {
 	this.dibuja = function () {
 		ctx.save();
 		ctx.fillStyle = "green";
-		ctx.fillRect(this.x, this.y, this.w, this.w);
+        ctx.fillRect(this.x, this.y, this.w, this.w);
+        //Velocidad de disparo de la nave
+		this.y = this.y - 10;
+		ctx.restore();
+	};
