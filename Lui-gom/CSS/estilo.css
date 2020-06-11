@@ -19,3 +19,12 @@ body { background-color: #000; }
 	position: absolute;
 	transition: all 0.2s
 }
+
+.pointer {
+	height: 20px;
+	margin-top: 20px;
+	border-bottom: 0px;
+	font-size: 20px;
+	text-align: center;
+	padding: 10px 0px;
+}
