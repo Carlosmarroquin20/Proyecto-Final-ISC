@@ -25,4 +25,9 @@ window.onload = function () {
                 //Tiempo de espera para la pantalla de carga
 				setTimeout(anima, 3000);
 				disparoEnemigo = setTimeout(disparaEnemigo, tiempoDisparo);
-			}
+            }
+        } else {
+			alert("Error");
+		}
+	}
+}
