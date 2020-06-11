@@ -1,15 +1,16 @@
-body { background-color: #000; }
 * {
 	padding: 0px;
 	margin: 0px;
 	font-family: sans-serif;
 }
-
+body { background-color: #000; }
 .contenedor {
     padding: 0px;
     margin: auto;
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
+    background-color: #306;
+    border: 8px dashed #99c;
 }
 
 #player {
