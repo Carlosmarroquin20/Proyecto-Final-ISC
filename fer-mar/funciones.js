@@ -68,7 +68,6 @@ var endGame = false;
 var disparoEnemigo;
 var tiempoDisparo = 400;
 var puntos = 0;
-
 //Balas de la nave
 function Bala(x, y, w) {
 	this.x = x;
@@ -82,7 +81,6 @@ function Bala(x, y, w) {
 		this.y = this.y - 10;
 		ctx.restore();
 	};
-
     //Balas de los Ovnis
 	this.dispara = function () {
 		ctx.save();
@@ -93,7 +91,6 @@ function Bala(x, y, w) {
 		ctx.restore();
 	};
 }
-
 //Objetos de Nave y animaciones
 function nave(x) {
     //Posicion de la nave
@@ -131,8 +128,7 @@ function Enemigo(x, y) {
 	this.num = 14;
 	this.figura = true;
 	this.vive = true;
-	this.dibuja = function () {
-        
+	this.dibuja = function () { 
         //Retraso
 		if (this.ciclos > 20) {
             //Saltos de los enemigos
@@ -171,7 +167,6 @@ function Enemigo(x, y) {
 
 	};
 }
-
 //Redibujado de Canva y funciones
 function anima() {
 	if (endGame == false) {
@@ -189,7 +184,6 @@ function mensaje(cadena) {
 	ctx.font = "bold 75px Arial";
 	ctx.fillText(cadena, lon, 220);
 }
-
 //Colisiones de enemigos y nave
 function colisiones() {
 	for (var i = 0; i < ovnis_array.length; i++) {
