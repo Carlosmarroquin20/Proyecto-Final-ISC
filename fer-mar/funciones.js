@@ -301,4 +301,11 @@ function pinta() {
 			balas_array[i].dibuja();
 			if (balas_array[i].y < 0) balas_array[i] = null;
 		}
+    }
+    //Balas enemigas
+	for (var i = 0; i < balasEnemigas_array.length; i++) {
+		if (balasEnemigas_array[i] != null) {
+			balasEnemigas_array[i].dispara();
+			if (balasEnemigas_array[i].y > canvas.height) balasEnemigas_array[i] = null;
+		}
 	}
