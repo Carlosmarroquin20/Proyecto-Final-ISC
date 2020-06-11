@@ -1,0 +1,10 @@
+
+/*Ajustes del body*/
+body {
+    display: block;
+    width: 630px;
+    margin: 0 auto;
+    background-image: url("C:/laragon/www/Proyecto-Final-ISC/img/space.jpg");
+    background-size: 100%;
+    align-content: center;
+}
