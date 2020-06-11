@@ -132,3 +132,6 @@ function Enemigo(x, y) {
 	this.figura = true;
 	this.vive = true;
 	this.dibuja = function () {
+        
+        //Retraso
+		if (this.ciclos > 20) {
