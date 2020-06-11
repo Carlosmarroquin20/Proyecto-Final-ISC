@@ -322,3 +322,28 @@ function pinta() {
 	}
 	if (numEnemigos == 0) gameOver();
 }
+//Control de enemigos que disparan
+function disparaEnemigo() {
+	for (var i = ovnis_array.length - 1; i > 0; i--) {
+		if (ovnis_array[i] != null) {
+			ultimos.push(i);
+		}
+		if (ultimos.length >= 15) break;
+	}
+	Array.prototype.clean = function(deleteValue) { 
+		for (var i = 0; i < this.length; i++) {
+				if (this[i] == deleteValue) { 
+					this.splice(i, 1); i--; 
+				} 
+			} return this; 
+		}; 
+	ovnis_array.clean(undefined);
+	d = ultimos[Math.floor(Math.random() * ovnis_array.length)];
+	if(ovnis_array[d] == null || d == null){
+		ovnis_array.clean(undefined);
+		d = Math.floor(Math.random() * ovnis_array.length);
+	}
+	balasEnemigas_array.push(new Bala(ovnis_array[d].x + ovnis_array[d].w / 2, ovnis_array[d].y, 5));
+	clearTimeout(disparoEnemigo);
+	disparoEnemigo = setTimeout(disparaEnemigo, tiempoDisparo);
+}
