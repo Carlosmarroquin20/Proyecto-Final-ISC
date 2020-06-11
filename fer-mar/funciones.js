@@ -258,4 +258,7 @@ function municiones() {
 //Verificacion de los bordes y pulsaciones de tecla espacio para disparos
 function verifica() {
 	if (tecla[teclaDerecha]) x += 5;
-	if (tecla[teclaIzquierda]) x -= 5;
+    if (tecla[teclaIzquierda]) x -= 5;
+    //Verificacion del cañon
+	if (x > canvas.width - 20) x = canvas.width - 20;
+	if (x < 0) x = 0;
