@@ -25,12 +25,12 @@ function restarTiempo() {
 		puntos = 0;
 	}
 }
-
+//Volver al estado inicial
 function reiniciar() {
-    if (marcha==1) { 
-       clearInterval(elcrono);
-       marcha=0;	
+    if (marcha==1) { //si el cronómetro está en marcha:
+       clearInterval(elcrono); //parar el crono
+       marcha=0;	//indicar que está parado
     }
- cro=0; 
- visor.innerHTML = "0 : 00 : 00 : 00"; 
+ cro=0;  //tiempo transcurrido a cero
+ visor.innerHTML = "0 : 00 : 00 : 00"; //visor a cero
 }	
