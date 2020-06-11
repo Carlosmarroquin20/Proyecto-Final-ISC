@@ -223,3 +223,17 @@ function colisiones() {
 		}
 	}
 }
+//Verificacion si ganamos o perdemos el juego
+function gameOver() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	balas_array = [];
+	ovnis_array = [];
+	balasEnemigas_array = [];
+	if( enemigosVivos == 0 ){
+		mensaje("WIN");
+	}else{
+		mensaje("GAME OVER");
+	}
+	endGame = false;
+	clearTimeout(disparoEnemigo);
+}
