@@ -189,3 +189,37 @@ function mensaje(cadena) {
 	ctx.font = "bold 75px Arial";
 	ctx.fillText(cadena, lon, 220);
 }
+
+//Colisiones de enemigos y nave
+function colisiones() {
+	for (var i = 0; i < ovnis_array.length; i++) {
+		for (var j = 0; j < balas_array.length; j++) {
+			enemigo = ovnis_array[i];
+			bala = balas_array[j];
+			if (enemigo != null && bala != null) {
+				if ((bala.x > enemigo.x) &&
+					(bala.x < enemigo.x + enemigo.w) &&
+					(bala.y > enemigo.y) &&
+					(bala.y < enemigo.y + enemigo.w)) {
+					enemigo.vive = false;
+					enemigosVivos = enemigosVivos - 1;
+					ovnis_array[i] = null;
+					balas_array[j] = null;
+					puntos += 10;
+					score();
+				}
+			}
+		}
+	}
+	for (var j = 0; j < balasEnemigas_array.length; j++) {
+		bala = balasEnemigas_array[j];
+		if (bala != null) {
+			if ((bala.x > nave.x) &&
+				(bala.x < nave.x + nave.w) &&
+				(bala.y > nave.y) &&
+				(bala.y < nave.y + nave.h)) {
+				gameOver();
+			}
+		}
+	}
+}
