@@ -14,8 +14,10 @@ body { background-color: #000; }
 }
 
 #player {
-	width: 10px;
-	height: 10px;
+	background-color: #ff3;
+	border: 2px dashed #c60;
+	width: 20px;
+	height: 20px;
 	border-radius: 29px;
 	position: absolute;
 	transition: all 0.2s
