@@ -21,4 +21,8 @@ window.onload = function () {
 					{
 						ovnis_array.push(new Enemigo(100 + 40 * j, 30 + 45 * i));
 					}
-				} 
+                } 
+                //Tiempo de espera para la pantalla de carga
+				setTimeout(anima, 3000);
+				disparoEnemigo = setTimeout(disparaEnemigo, tiempoDisparo);
+			}
