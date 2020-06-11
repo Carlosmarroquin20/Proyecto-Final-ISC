@@ -45,3 +45,26 @@ document.addEventListener("keydown", function (e) {
 document.addEventListener("keyup", function (e) {
 	tecla[e.keyCode] = false;
 });
+//Variables
+var canvas, ctx;
+var x = 100;
+var y = 100;
+var teclaIzquierda = 37;
+var teclaDerecha = 39;
+var teclaEspacio = 32;
+var imgNave, imgOvni;
+var municion = 100;
+var ultimos = new Array();
+var imgAni = 0;
+var imgAni2 = 0;
+var enemigosVivos = 60;
+var tiempoBala = true ;
+var teclaPulsada = null;
+var tecla = [];
+var balas_array = new Array();
+var ovnis_array = new Array();
+var balasEnemigas_array = new Array();
+var endGame = false;
+var disparoEnemigo;
+var tiempoDisparo = 400;
+var puntos = 0;
