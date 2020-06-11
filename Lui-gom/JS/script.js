@@ -14,3 +14,28 @@ function sumarPuntos(){
         alert("Ganaste");
     }
 }
+
+
+function restarTiempo() {
+    tiempo--;
+	document.getElementById("tiempo").innerHTML = "&nbsp;&nbsp;&nbsp;Tiempo: "+tiempo; 
+	if (tiempo == 0) {
+        alert("Perdiste");
+		tiempo = 0;
+		puntos = 0;
+	}
+}
+setInterval(restarTiempo,1000);
+
+$("#miDiv").on("mouseenter", function() {
+
+    // limpiar intervalo 
+    clearInterval(miIntervalo);
+
+    // redefinir intervalo
+    miIntervalo = setInterval(function() {
+        $('.outtime40').fadeOut(0);
+    }, 40000);
+
+    $(".intime2").stop(true, true).delay(2000).fadeIn(0);
+});
