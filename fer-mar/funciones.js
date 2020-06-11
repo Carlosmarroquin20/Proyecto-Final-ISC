@@ -93,3 +93,6 @@ function Bala(x, y, w) {
 		ctx.restore();
 	};
 }
+
+//Objetos de Nave y animaciones
+function nave(x) {
