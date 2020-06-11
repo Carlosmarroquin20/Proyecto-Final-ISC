@@ -82,3 +82,14 @@ function Bala(x, y, w) {
 		this.y = this.y - 10;
 		ctx.restore();
 	};
+
+    //Balas de los Ovnis
+	this.dispara = function () {
+		ctx.save();
+		ctx.fillStyle = "yellow";
+		ctx.fillRect(this.x, this.y, this.w, this.w);
+		//Velocidad de disparo de los ovnis
+		this.y = this.y + 4;
+		ctx.restore();
+	};
+}
