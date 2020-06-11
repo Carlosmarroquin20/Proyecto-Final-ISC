@@ -15,3 +15,10 @@ h1 {
     font-size: 35px;
     color: white;
 }
+/*Creacion de los estilos para el h4*/
+h4 {
+    font-family: arial;
+    font-size: medium;
+    color: white;
+    font-size: 12px;
+}
