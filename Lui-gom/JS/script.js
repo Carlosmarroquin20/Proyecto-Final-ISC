@@ -14,3 +14,11 @@ function sumarPuntos(){
         alert("Ganaste");
     }
 }
+
+
+function restarTiempo() {
+    tiempo--;
+	document.getElementById("tiempo").innerHTML = "&nbsp;&nbsp;&nbsp;Tiempo: "+tiempo; 
+	if (tiempo == 0)
+
+}
