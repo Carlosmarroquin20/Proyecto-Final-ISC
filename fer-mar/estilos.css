@@ -37,3 +37,14 @@ h4 {
     border-radius: 5px;
     border-color: #0051ff;
 }
+/*Creacion del estilo para p*/
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: center;
+    background-size: auto;
+    font-family: consolas;
+    margin: 20px;
+    }
