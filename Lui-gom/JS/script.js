@@ -19,6 +19,9 @@ function sumarPuntos(){
 function restarTiempo() {
     tiempo--;
 	document.getElementById("tiempo").innerHTML = "&nbsp;&nbsp;&nbsp;Tiempo: "+tiempo; 
-	if (tiempo == 0)
-
+	if (tiempo == 0) {
+		alert("Perdiste");
+		tiempo = 0;
+		puntos = 0;
+	}
 }
