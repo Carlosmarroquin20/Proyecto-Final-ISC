@@ -25,6 +25,8 @@ function restarTiempo() {
 		puntos = 0;
 	}
 }
+setInterval(restarTiempo,1000);
+
 //Volver al estado inicial
 function reiniciar() {
     if (marcha==1) { //si el cronómetro está en marcha:
