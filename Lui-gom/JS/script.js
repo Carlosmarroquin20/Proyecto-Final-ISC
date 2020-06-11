@@ -20,8 +20,17 @@ function restarTiempo() {
     tiempo--;
 	document.getElementById("tiempo").innerHTML = "&nbsp;&nbsp;&nbsp;Tiempo: "+tiempo; 
 	if (tiempo == 0) {
-		alert("Perdiste");
+        alert("Perdiste");
 		tiempo = 0;
 		puntos = 0;
 	}
 }
+
+function reiniciar() {
+    if (marcha==1) { 
+       clearInterval(elcrono);
+       marcha=0;	
+    }
+ cro=0; 
+ visor.innerHTML = "0 : 00 : 00 : 00"; 
+}	
