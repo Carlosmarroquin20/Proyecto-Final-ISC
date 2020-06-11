@@ -275,3 +275,17 @@ function verifica() {
 		}
 	}
 }
+//Verificacion de la municion
+function checarBalas(){
+	var balasArrayVal = 0;
+	for(let i = 0 ; i < balas_array.length; i++){
+		if(balas_array[i] != null){
+			balasArrayVal = 1;
+		}
+	}
+	if(municion == 0 && balas_array.length == 100 && balasArrayVal == 0 && enemigosVivos > 0){
+		tecla[teclaEspacio] = false;
+			alert("Without ammunition");
+			gameOver();
+	}
+}
