@@ -60,3 +60,8 @@ p{
         transition: 0.5s;
         background-color: rgb(39, 61, 185);
         }
+        .btn-neon:hover{
+        background: gray;
+        box-shadow: 0 0 10px gray, 0 0 40px gray, 0 0 80px gray;
+        transition-delay: 1s;
+        }
