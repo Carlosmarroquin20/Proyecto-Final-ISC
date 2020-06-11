@@ -65,3 +65,7 @@ p{
         box-shadow: 0 0 10px gray, 0 0 40px gray, 0 0 80px gray;
         transition-delay: 1s;
         }
+        .btn-neon span{
+        position: absolute;
+        display: block;
+        }
