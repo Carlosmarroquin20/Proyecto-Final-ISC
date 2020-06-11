@@ -154,7 +154,7 @@ function Enemigo(x, y) {
 		if (this.vive) {
 			if (imgAni < 4) {
                 ctx.drawImage(imgOvni, 0   , 0   , 32  , 32  , this.x, this.y, 35  , 35);
-                
+
                 //Dibujado de: imgfile, xini, yini, wimg, himg, xpos  , ypos  , wrez, hrez
 			} else if(imgAni < 8) {
 				ctx.drawImage(imgOvni, 32, 0, 32, 32, this.x, this.y, 35, 35);
@@ -172,3 +172,12 @@ function Enemigo(x, y) {
 	};
 }
 
+//Redibujado de Canva y funciones
+function anima() {
+	if (endGame == false) {
+		requestAnimationFrame(anima);
+		verifica();
+		pinta();
+		colisiones();
+	}
+}
