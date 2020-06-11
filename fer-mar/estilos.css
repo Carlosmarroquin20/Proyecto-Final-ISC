@@ -116,3 +116,9 @@ p{
         transition: 1s;
         transition-delay: 0.75s;
         }
+/*Creacion de el tamaño, fondo y la sombra de la caja del Canvas*/
+#miCanvas {
+    border: groove 5px #0051ff;
+    background-image: url("imagenes/universo.jpg");
+    box-shadow: 7px 7px 5px black;
+}
