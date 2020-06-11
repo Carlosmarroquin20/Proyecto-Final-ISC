@@ -120,3 +120,15 @@ function nave(x) {
 		
 	};
 }
+//Objetos de Enemigos y animaciones
+function Enemigo(x, y) {
+	this.x = x;
+	this.y = y;
+	this.w = 35;
+	this.veces = 0;
+	this.dx = 5;
+	this.ciclos = 0;
+	this.num = 14;
+	this.figura = true;
+	this.vive = true;
+	this.dibuja = function () {
