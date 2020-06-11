@@ -261,4 +261,12 @@ function verifica() {
     if (tecla[teclaIzquierda]) x -= 5;
     //Verificacion del cañon
 	if (x > canvas.width - 20) x = canvas.width - 20;
-	if (x < 0) x = 0;
+    if (x < 0) x = 0;
+    //Disparo
+	if (tecla[teclaEspacio]) {
+		if (tiempoBala == true && municion !=0 ){
+			tiempoBala = false;
+			balas_array.push(new Bala(nave.x + 12, nave.y - 3, 5));
+			(municion >0)?municion = municion - 1 : false;
+			tecla[teclaEspacio] = false;
+			disparaEnemigo();
