@@ -8,3 +8,10 @@ body {
     background-size: 100%;
     align-content: center;
 }
+/*Creacion de los estilos para el h1*/
+h1 {
+    text-align: center;
+    font-family: fantasy;
+    font-size: 35px;
+    color: white;
+}
