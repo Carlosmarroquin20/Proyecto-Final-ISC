@@ -97,6 +97,19 @@
             this.dibuja = dibujaCajaLetra;
             this.dibujaLetra = dibujaLetraLetra;
         }
+       /*Funciones*/
+
+        /*Dibujar Teclas*/
+        function dibujaTecla(){
+            ctx.fillStyle = colorTecla;
+            ctx.strokeStyle = colorMargen;
+            ctx.fillRect(this.x, this.y, this.ancho, this.alto);
+            ctx.strokeRect(this.x, this.y, this.ancho, this.alto);
+            
+            ctx.fillStyle = "white";
+            ctx.font = "bold 20px courier";
+            ctx.fillText(this.letra, this.x+this.ancho/2-5, this.y+this.alto/2+5);
+        }
 </script>
 </body>
 
