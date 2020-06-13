@@ -85,6 +85,9 @@ p {
   #title span::selection {
 	background-color: red; /* This hides the selection */
   }
+/*Creacion del estilo para el slogan*/
+#slogan { font-size: 0.25em; }
+#slogan span:active { text-shadow: none; }
 
 
 
