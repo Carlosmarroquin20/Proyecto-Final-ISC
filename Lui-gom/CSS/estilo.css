@@ -14,8 +14,8 @@ body { background-color: #000; }
 }
 
 #player {
-	background-color: #ff3;
-	border: 2px dashed #c60;
+	background-color: #f00;
+	border: 2px dashed #800;
 	width: 20px;
 	height: 20px;
 	border-radius: 29px;
