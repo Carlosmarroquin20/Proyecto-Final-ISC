@@ -726,3 +726,9 @@ function generateAsteroid(x, y, radius, type)
     asteroids[asteroids.length] = a;
     asteroidVelFactor += 0.025;
 }
+
+function checkCollisions()
+{
+    checkBulletAsteroidCollisions();
+    checkShipAsteroidCollisions();
+}
