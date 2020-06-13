@@ -813,3 +813,11 @@ function checkDistanceCollision(obj1, obj2)
 
     return false;
 }
+
+function destroyAsteroid(asteroid)
+{
+    asteroid.blacklisted = true;
+
+    generateAsteroidExplosion(asteroid);
+    resolveAsteroidType(asteroid);
+}
