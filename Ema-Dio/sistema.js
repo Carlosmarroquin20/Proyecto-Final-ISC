@@ -56,5 +56,15 @@ var Pool = (function()
 
 var Vec2D = (function()
 {
-   
+    //metodos expuestos:
+
+    var create = function(x, y)
+    {
+        var obj = Object.create(def);
+        obj.setXY(x, y);
+
+        return obj;
+    };
+
+
 }());
