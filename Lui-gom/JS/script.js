@@ -20,7 +20,7 @@ function restarTiempo() {
     tiempo--;
 	document.getElementById("tiempo").innerHTML = "&nbsp;&nbsp;&nbsp;Tiempo: "+tiempo; 
 	if (tiempo == 0) {
-        alert("Perdiste, actualiza la pagina");
+        alert("Perdiste");
 	}
 }
 
