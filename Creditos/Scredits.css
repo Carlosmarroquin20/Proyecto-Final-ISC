@@ -61,7 +61,30 @@ p {
 #stars:hover span {
   animation: none; /* Disables the animation on hover */
 }
-
+/*Creacion del estill para el titulo*/
+#title {
+	font-family: Helvetica, Geneva, sans-serif; /* Any font would work, but SansSerif looks better */
+  }
+  #title:focus {
+	outline: none;
+  }
+  #title span {
+	vertical-align: middle;
+	line-height: 1.5em;
+	transition: font-size 2s cubic-bezier(0, 1, 0, 1);
+  }
+  #title span:hover {
+	font-size: 1.5em; /* This adds a hover effect */
+	line-height: 1em;
+	transition: font-size .2s cubic-bezier(0, 0.75, 0, 1);
+  }
+  #title span:active {
+	font-size: 1em;
+	text-shadow: none; /* Click to disable the 3D effect */
+  }
+  #title span::selection {
+	background-color: red; /* This hides the selection */
+  }
 
 
 
