@@ -248,6 +248,45 @@
             var y = yy-posCanvas.top;
             return{x:x, y:y}
         }
+       
+        /*Deteccion de tecla clickeada y comparacion con las de la palabra ya elegida al azar*/
+        function selecciona(e){
+            var pos = ajusta(e.clientX, e.clientY);
+            var x = pos.x;
+            var y = pos.y;
+            var tecla;
+            var bandera = false;
+            for (var i = 0; i < teclas_array.length; i++){
+                tecla = teclas_array[i];
+                if (tecla.x > 0){
+                    if ((x > tecla.x) && (x < tecla.x + tecla.ancho) && (y > tecla.y) && (y < tecla.y + tecla.alto)){
+                        break;
+                    }
+                }
+            }
+            if (i < teclas_array.length){
+                for (var i = 0 ; i < palabra.length ; i++){ 
+                    letra = palabra.substr(i, 1);
+                    if (letra == tecla.letra){ /*Comparado de resultado con la letra correcta*/
+                        caja = letras_array[i];
+                        caja.dibujaLetra();
+                        aciertos++;
+                        bandera = true;
+                    }
+                }
+                if (bandera == false){ /*Si falla aumenta los errores y checa si perdio para mandar a la funcion gameover*/
+                    errores++;
+                    horca(errores);
+                    if (errores == 5) gameOver(errores);
+                }
+                /* Borra la tecla que se a presionado */
+                ctx.clearRect(tecla.x - 1, tecla.y - 1, tecla.ancho + 2, tecla.alto + 2);
+                tecla.x - 1;
+                /* checa si se gano y manda a la funcion gameover */
+                if (aciertos == palabra.length) gameOver(errores);
+            }
+        }
+        
           
 </script>
 </body>
