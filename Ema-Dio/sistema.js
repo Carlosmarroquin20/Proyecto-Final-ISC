@@ -646,3 +646,31 @@ function updateParticles()
         p.update();
     }
 }
+
+function updateBullets()
+{
+    var i = bullets.length - 1;
+
+    for(i; i > -1; --i)
+    {
+        var b = bullets[i];
+
+        if(b.blacklisted)
+        {
+            b.reset();
+
+            bullets.splice(bullets.indexOf(b), 1);
+            bulletPool.disposeElement(b);
+
+            continue;
+        }
+
+        b.update();
+
+        if(b.pos.getX() > screenWidth) b.blacklisted = true;
+        else if(b.pos.getX() < 0) b.blacklisted = true;
+
+        if(b.pos.getY() > screenHeight) b.blacklisted = true;
+        else if(b.pos.getY() < 0) b.blacklisted = true;
+    }
+}
