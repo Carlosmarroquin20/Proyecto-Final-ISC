@@ -205,3 +205,52 @@ var Particle = (function()
 
     return {create:create};
 }());
+
+//bala ...........................................................
+
+var Bullet = (function()
+{
+    //metodos expuestos:
+
+    var create = function()
+    {
+        var obj = Object.create(def);
+        obj.radius = 4;
+        obj.color = '#fff';
+        obj.pos = Vec2D.create(0, 0);
+        obj.vel = Vec2D.create(0, 0);
+        obj.blacklisted = false;
+
+        return obj;
+    };
+
+    //definicion:
+
+    var def =
+    {
+        radius: null,
+        color: null,
+        pos: null,
+        vel: null,
+        blacklisted: null,
+
+        update: function()
+        {
+            this.pos.add(this.vel);
+        },
+
+        reset: function()
+        {
+            this.blacklisted = false;
+        }
+    };
+
+    return {create:create};
+}());
+
+//asteroides.........................................................
+
+var Asteroid = (function()
+{
+
+}());
