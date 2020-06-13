@@ -799,3 +799,17 @@ function generateShipExplosion()
         particles[particles.length] = p;
     }
 }
+
+function checkDistanceCollision(obj1, obj2)
+{
+    var vx = obj1.pos.getX() - obj2.pos.getX();
+    var vy = obj1.pos.getY() - obj2.pos.getY();
+    var vec = Vec2D.create(vx, vy);
+
+    if(vec.getLength() < obj1.radius + obj2.radius)
+    {
+        return true;
+    }
+
+    return false;
+}
