@@ -428,3 +428,114 @@ window.onload = function()
 
     loop();
 };
+
+window.onresize = function()
+{
+    if(!canvas) return;
+
+    screenWidth = canvas.clientWidth;
+    screenHeight = canvas.clientHeight;
+
+    canvas.width = screenWidth;
+    canvas.height = screenHeight;
+
+    hScan = (screenHeight / 4) >> 0;
+};
+function keyboardInit()
+{
+    window.onkeydown = function(e)
+    {
+        switch(e.keyCode)
+        {
+            //tecla A o Izquierda
+            case 65:
+            case 37:
+
+            keyLeft = true;
+
+            break;
+
+            //tecla W o Arriba
+            case 87:
+            case 38:
+
+            keyUp = true;
+
+            break;
+
+            //tecla D o derecha
+            case 68:
+            case 39:
+
+            keyRight = true;
+
+            break;
+
+            //tecla S o abajo
+            case 83:
+            case 40:
+
+            keyDown = true;
+
+            break;
+
+            //tecla espacio
+            case 32:
+       case 75:
+
+            keySpace = true;
+
+            break;
+        }
+    
+    e.preventDefault();
+    };
+
+    window.onkeyup = function(e)
+    {
+        switch(e.keyCode)
+        {
+            //tecla A o Izquierda
+            case 65:
+            case 37:
+
+            keyLeft = false;
+
+            break;
+
+            //tecla W o Arriba
+            case 87:
+            case 38:
+
+            keyUp = false;
+
+            break;
+
+            //tecla D o Derecha
+            case 68:
+            case 39:
+
+            keyRight = false;
+
+            break;
+
+            //tecla S o Abajo
+            case 83:
+            case 40:
+
+            keyDown = false;
+
+            break;
+
+            //tecla espacio
+       case 75:
+            case 32:
+
+            keySpace = false;
+
+            break;
+        }
+    
+    e.preventDefault();
+    };
+}
