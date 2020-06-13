@@ -102,7 +102,7 @@ p {
   #meta a { text-decoration: none; color: #7276ff; }
   #meta a:hover { color: rgba(114,118,255,0.5); }
   #meta img { vertical-align: text-bottom; }
-/*Creacion del estilo para el button*/
+/*Creacion del estilo para el button.*/
 button{
     padding: auto;
     width: auto;
