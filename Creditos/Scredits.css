@@ -45,7 +45,22 @@ p {
   #stars span:active {
 	text-shadow: none; /*Clik para desactivar el efecto 3D*/
   }
+/*Animacion de las estrellas*/
+#stars span:nth-child(1), #stars span:nth-child(5) { font-size: 0.3em; animation-delay: 0.2s; }
+#stars span:nth-child(2), #stars span:nth-child(4) { font-size: 0.5em; animation-delay: 0.1s; }
+#stars span:nth-child(3) { font-size: 0.8em; animation-delay: 0s; }
 
+#stars span { animation: stars-animation 3s 50 ease-in-out; }
+
+@-webkit-keyframes stars-animation {
+  0% { transform: scale(1); }
+  90% { transform: scale(1); }
+  95% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+#stars:hover span {
+  animation: none; /* Disables the animation on hover */
+}
 
 
 
