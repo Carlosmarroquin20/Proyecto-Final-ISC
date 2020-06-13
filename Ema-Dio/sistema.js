@@ -863,3 +863,17 @@ function resolveAsteroidType(asteroid)
         break;
     }
 }
+
+function render()
+{
+    context.fillStyle = '#262626';
+    context.globalAlpha = 0.4;
+    context.fillRect(0, 0, screenWidth, screenHeight);
+    context.globalAlpha = 1;
+
+    renderShip();
+    renderParticles();
+    renderBullets();
+    renderAsteroids();
+    renderScanlines();
+}
