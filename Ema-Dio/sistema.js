@@ -732,3 +732,27 @@ function checkCollisions()
     checkBulletAsteroidCollisions();
     checkShipAsteroidCollisions();
 }
+
+function checkBulletAsteroidCollisions()
+{
+    var i = bullets.length - 1;
+    var j;
+
+    for(i; i > -1; --i)
+    {
+        j = asteroids.length - 1;
+
+        for(j; j > -1; --j)
+        {
+            var b = bullets[i];
+            var a = asteroids[j];
+
+            if(checkDistanceCollision(b, a))
+            {
+                b.blacklisted = true;
+
+                destroyAsteroid(a);
+            }
+        }
+    }
+}
