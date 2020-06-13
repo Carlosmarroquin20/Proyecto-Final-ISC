@@ -756,3 +756,24 @@ function checkBulletAsteroidCollisions()
         }
     }
 }
+
+function checkShipAsteroidCollisions()
+{
+    var i = asteroids.length - 1;
+
+    for(i; i > -1; --i)
+    {
+        var a = asteroids[i];
+        var s = ship;
+
+        if(checkDistanceCollision(a, s))
+        {
+            if(s.idle) return;
+
+            s.idle = true;
+
+            generateShipExplosion();
+            destroyAsteroid(a);
+        }
+    }
+}
