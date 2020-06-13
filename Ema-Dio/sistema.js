@@ -843,3 +843,23 @@ function generateAsteroidExplosion(asteroid)
         particles[particles.length] = p;
     }
 }
+
+function resolveAsteroidType(asteroid)
+{
+    switch(asteroid.type)
+    {
+        case 'b':
+
+        generateAsteroid(asteroid.pos.getX(), asteroid.pos.getY(), 40, 'm');
+        generateAsteroid(asteroid.pos.getX(), asteroid.pos.getY(), 40, 'm');
+
+        break;
+
+        case 'm':
+
+        generateAsteroid(asteroid.pos.getX(), asteroid.pos.getY(), 20, 's');
+        generateAsteroid(asteroid.pos.getX(), asteroid.pos.getY(), 20, 's');
+
+        break;
+    }
+}
