@@ -150,3 +150,10 @@ var Vec2D = (function()
 
     return {create:create};
 }());
+
+//particulas ...........................................................
+
+var Particle = (function()
+{
+
+}());
