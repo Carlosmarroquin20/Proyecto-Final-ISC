@@ -4,7 +4,7 @@ body {
     display: block;
     width: 630px;
     margin: 0 auto;
-    background-image: url("C:/laragon/www/Proyecto-Final-ISC/img/space.jpg");
+    background-image: url("C:/laragon/www/Final-Project-ISC/img/space.jpg");
     background-size: 100%;
     align-content: center;
 }
@@ -119,6 +119,6 @@ p{
 /*Creacion de el tamaño, fondo y la sombra de la caja del Canvas*/
 #miCanvas {
     border: groove 5px #0051ff;
-    background-image: url("imagenes/universo.jpg");
+    background-image: url("C:/laragon/www/Final-Project-ISC/fer-mar/imagenes/universo.jpg");
     box-shadow: 7px 7px 5px black;
 }
