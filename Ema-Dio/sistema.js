@@ -576,3 +576,33 @@ function loop()
 
     getAnimationFrame(loop);
 }
+
+function updateShip()
+{
+    ship.update();
+
+    if(ship.idle) return;
+
+    if(keySpace) ship.shoot();
+    if(keyLeft) ship.angle -= 0.1;
+    if(keyRight) ship.angle += 0.1;
+
+    if(keyUp)
+    {
+        ship.thrust.setLength(0.1);
+        ship.thrust.setAngle(ship.angle);
+
+        generateThrustParticle();
+    }
+    else
+    {
+        ship.vel.mul(0.94);
+        ship.thrust.setLength(0);
+    }
+
+    if(ship.pos.getX() > screenWidth) ship.pos.setX(0);
+    else if(ship.pos.getX() < 0) ship.pos.setX(screenWidth);
+
+    if(ship.pos.getY() > screenHeight) ship.pos.setY(0);
+    else if(ship.pos.getY() < 0) ship.pos.setY(screenHeight);
+}
