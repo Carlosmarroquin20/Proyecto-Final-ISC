@@ -298,3 +298,10 @@ var Asteroid = (function()
     return {create:create};
 
 }());
+
+//nave...........................................................
+
+var Ship = (function()
+{
+
+}());
