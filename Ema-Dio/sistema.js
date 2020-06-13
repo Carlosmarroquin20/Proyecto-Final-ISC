@@ -877,3 +877,24 @@ function render()
     renderAsteroids();
     renderScanlines();
 }
+
+function renderShip()
+{
+    if(ship.idle) return;
+
+    context.save();
+    context.translate(ship.pos.getX() >> 0, ship.pos.getY() >> 0);
+    context.rotate(ship.angle);
+
+    context.strokeStyle = '#FFF';
+    context.lineWidth = (Math.random() > 0.9) ? 2 : 1;
+    context.beginPath();
+    context.moveTo(10, 0);
+    context.lineTo(-10, -10);
+    context.lineTo(-10, 10);
+    context.lineTo(10, 0);
+    context.stroke();
+    context.closePath();
+
+    context.restore();
+}
