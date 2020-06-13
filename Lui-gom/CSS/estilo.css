@@ -14,8 +14,8 @@ body { background-color: #000; }
 }
 
 #player {
-	background-color: #ff3;
-	border: 2px dashed #c60;
+	background-color: #f00;
+	border: 2px dashed #800;
 	width: 20px;
 	height: 20px;
 	border-radius: 29px;
@@ -32,4 +32,36 @@ body { background-color: #000; }
 	font-size: 20px;
 	text-align: center;
 	padding: 10px 0px;
+}
+
+#info {
+    color: #fc0;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    margin: 30px 10px 0;
+    padding: 8px;
+    background: #161616;
+    position: absolute;
+    z-index: 1;
+    height: 285px;
+    width: 260px;
+    
+}
+
+#info p {
+    font-size: 18px;
+}
+h1 {
+font-size: 42px;
+position: absolute;
+color: white;
+left: 445px;
+font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+img {
+position: absolute;
+height: 40px;
+width: 60px;
+left: 940px;
+top: 30px;
+
 }
