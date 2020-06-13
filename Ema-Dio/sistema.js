@@ -985,3 +985,18 @@ function renderScanlines()
 
     context.globalAlpha = 1;
 }
+
+function generateShot()
+{
+    var b = bulletPool.getElement();
+
+// si el conjunto de viñetas no tiene más elementos, devolverá 'nulo'.
+
+    if(!b) return;
+
+    b.radius = 1;
+    b.pos.setXY(ship.pos.getX() + Math.cos(ship.angle) * 14, ship.pos.getY() + Math.sin(ship.angle) * 14);
+    b.vel.setLength(10);
+    b.vel.setAngle(ship.angle);
+    bullets[bullets.length] = b;
+}
