@@ -88,7 +88,20 @@ p {
 /*Creacion del estilo para el slogan*/
 #slogan { font-size: 0.25em; }
 #slogan span:active { text-shadow: none; }
-
+/*Creacion del estilo para la meta info*/ 
+#meta {
+	color: #777;
+	font-size: 1.2em;
+	line-height: 1.6em;
+	text-align: center;
+	text-shadow: rgba(255,255,255,0.5) 0 1px 0;
+	margin: 30px;
+  }
+  #meta strong { font-weight: bold; color: #000; }
+  #meta p:first-child { margin-bottom: 20px; }
+  #meta a { text-decoration: none; color: #7276ff; }
+  #meta a:hover { color: rgba(114,118,255,0.5); }
+  #meta img { vertical-align: text-bottom; }
 
 
 
