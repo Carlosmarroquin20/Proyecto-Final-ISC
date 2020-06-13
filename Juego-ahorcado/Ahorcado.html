@@ -286,9 +286,51 @@
                 if (aciertos == palabra.length) gameOver(errores);
             }
         }
+
+        /*Borramos las teclas y la palabra con sus cajas y mandamos msj segun el caso si se gano o se perdio*/
+        function gameOver(errores){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "black";
+
+            ctx.font = "bold 50px Courier";
+            if (errores < 5){
+                ctx.fillText("Muy bien, la palabra es: ", 110, 280);
+            } else {
+                ctx.fillText("Lo sentimos, la palabra era: ", 110, 280);
+            }
+            
+            ctx.font = "bold 80px Courier";
+            lon = (canvas.width - (palabra.length*48))/2;
+            ctx.fillText(palabra, lon, 380);
+            horca(errores);
+        }
         
-          
+        /*Detectar si se a cargado nuestro contexco en el canvas*/
+        window.onload = function(){
+            canvas = document.getElementById("pantalla");
+            if (canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+                if(ctx){
+                    teclado();
+                    pintaPalabra();
+                    horca(errores);
+                    canvas.addEventListener("click", selecciona, false);
+                } else {
+                    alert ("Error al cargar el contexto!");
+                }
+            }
+        }                
 </script>
+
+<p id= "p1">
+    <button><a href="C:\laragon\www\Desktop\Final-Project-ISC\index.html" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+    Salir
+    </a></button>
+</p>  
 </body>
 
 
