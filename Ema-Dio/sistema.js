@@ -1000,3 +1000,13 @@ function generateShot()
     b.vel.setAngle(ship.angle);
     bullets[bullets.length] = b;
 }
+
+function resetGame()
+{
+    asteroidVelFactor = 0;
+
+    ship.pos.setXY(screenWidth >> 1, screenHeight >> 1);
+    ship.vel.setXY(0, 0);
+
+    resetAsteroids();
+}
