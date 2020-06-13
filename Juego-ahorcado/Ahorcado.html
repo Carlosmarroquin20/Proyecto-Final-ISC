@@ -208,7 +208,30 @@
                 y = inicioY + ren * 50;
             }
         }
-             
+
+        /*Obtencion de palabra aleatoria y division en letras*/
+        function pintaPalabra(){
+            var p = Math.floor(Math.random()*palabras_array.length);
+            palabra = palabras_array[p];
+  
+            pistaFunction(palabra);
+        
+            var w = canvas.width;
+            var len = palabra.length;
+            var ren = 0;
+            var col = 0;
+            var y = 230;
+            var lon = 50;
+            var x = (w - (lon+margen) *len)/2;
+            for(var i=0; i<palabra.length; i++){
+                letra = palabra.substr(i,1);
+                miLetra = new Letra(x, y, lon, lon, letra);
+                miLetra.dibuja();
+                letras_array.push(miLetra);
+                x += lon + margen;
+            }
+        }
+          
 </script>
 </body>
 
