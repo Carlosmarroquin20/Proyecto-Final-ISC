@@ -1010,3 +1010,14 @@ function resetGame()
 
     resetAsteroids();
 }
+
+function resetAsteroids()
+{
+    var i = asteroids.length - 1;
+
+    for(i; i > -1; --i)
+    {
+        var a = asteroids[i];
+        a.blacklisted = true;
+    }
+}
