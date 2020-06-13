@@ -34,3 +34,11 @@ color: white;
 left: 445px;
 font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
+
+img {
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    left: 940px;
+    top: 30px;
+}
