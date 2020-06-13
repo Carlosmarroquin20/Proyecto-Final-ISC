@@ -1,7 +1,7 @@
 document.getElementById('player').addEventListener("mouseover",sumarPuntos);
 
 puntos = 0;
-tiempo = 30;
+tiempo = 60;
 necesarios = 30;
 function sumarPuntos(){
     puntos++;
@@ -20,22 +20,12 @@ function restarTiempo() {
     tiempo--;
 	document.getElementById("tiempo").innerHTML = "&nbsp;&nbsp;&nbsp;Tiempo: "+tiempo; 
 	if (tiempo == 0) {
-        alert("Perdiste");
-		tiempo = 0;
-		puntos = 0;
+        alert("Perdiste, actualiza la pagina");
 	}
 }
+
 setInterval(restarTiempo,1000);
 
-$("#miDiv").on("mouseenter", function() {
+function actualizar(){location.reload(true);}
+setInterval("actualizar()",31000);
 
-    // limpiar intervalo 
-    clearInterval(miIntervalo);
-
-    // redefinir intervalo
-    miIntervalo = setInterval(function() {
-        $('.outtime40').fadeOut(0);
-    }, 40000);
-
-    $(".intime2").stop(true, true).delay(2000).fadeIn(0);
-});
