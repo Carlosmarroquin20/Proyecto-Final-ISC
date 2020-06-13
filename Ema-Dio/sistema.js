@@ -777,3 +777,25 @@ function checkShipAsteroidCollisions()
         }
     }
 }
+
+function generateShipExplosion()
+{
+    var i = 18;
+
+    for(i; i > -1; --i)
+    {
+        var p = particlePool.getElement();
+
+        //si el grupo de partículas no tiene más elementos, devolverá 'nulo'.
+
+        if(!p) return;
+
+        p.radius = Math.random() * 6 + 2;
+        p.lifeSpan = 80;
+        p.color = '#FFF';
+        p.vel.setLength(20 / p.radius);
+        p.vel.setAngle(ship.angle + (1 - Math.random() * 2) * doublePI);
+        p.pos.setXY(ship.pos.getX() + Math.cos(p.vel.getAngle()) * (ship.radius * 0.8), ship.pos.getY() + Math.sin(p.vel.getAngle()) * (ship.radius * 0.8));
+        particles[particles.length] = p;
+    }
+}
