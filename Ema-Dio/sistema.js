@@ -916,3 +916,21 @@ function renderParticles()
         context.closePath();
     }
 }
+
+function renderBullets()
+{
+    //inverso para loop = más rendimiento.
+
+    var i = bullets.length - 1;
+
+    for(i; i > -1; --i)
+    {
+        var b = bullets[i];
+
+        context.beginPath();
+        context.strokeStyle = b.color;
+        context.arc(b.pos.getX() >> 0, b.pos.getY() >> 0, b.radius, 0, doublePI);
+        if(Math.random() > 0.2) context.stroke();
+        context.closePath();
+    }
+}
