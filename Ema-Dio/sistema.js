@@ -606,3 +606,21 @@ function updateShip()
     if(ship.pos.getY() > screenHeight) ship.pos.setY(0);
     else if(ship.pos.getY() < 0) ship.pos.setY(screenHeight);
 }
+
+function generateThrustParticle()
+{
+    var p = particlePool.getElement();
+
+    //si el grupo de partículas no tiene más elementos, devolverá 'nulo'.
+
+    if(!p) return;
+
+    p.radius = Math.random() * 3 + 2;
+    p.color = '#FFF';
+    p.lifeSpan = 80;
+    p.pos.setXY(ship.pos.getX() + Math.cos(ship.angle) * -14, ship.pos.getY() + Math.sin(ship.angle) * -14);
+    p.vel.setLength(8 / p.radius);
+    p.vel.setAngle(ship.angle + (1 - Math.random() * 2) * (Math.PI / 18));
+    p.vel.mul(-1);
+    particles[particles.length] = p;
+}
