@@ -709,3 +709,20 @@ function updateAsteroids()
         generateAsteroid(screenWidth * factor, screenHeight * factor, 60 , 'b');
     }
 }
+
+function generateAsteroid(x, y, radius, type)
+{
+    var a = asteroidPool.getElement();
+
+    //Si el grupo de viñetas no tiene más elementos, devolverá 'nulo'.
+
+    if(!a) return;
+
+    a.radius = radius;
+    a.type = type;
+    a.pos.setXY(x, y);
+    a.vel.setLength(1 + asteroidVelFactor);
+    a.vel.setAngle(Math.random() * (Math.PI * 2));
+    asteroids[asteroids.length] = a;
+    asteroidVelFactor += 0.025;
+}
