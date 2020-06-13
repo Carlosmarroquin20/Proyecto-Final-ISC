@@ -898,3 +898,21 @@ function renderShip()
 
     context.restore();
 }
+
+function renderParticles()
+{
+    //inverso para loop = más rendimiento.
+
+    var i = particles.length - 1;
+
+    for(i; i > -1; --i)
+    {
+        var p = particles[i];
+
+        context.beginPath();
+        context.strokeStyle = p.color;
+        context.arc(p.pos.getX() >> 0, p.pos.getY() >> 0, p.radius, 0, doublePI);
+        if(Math.random() > 0.4) context.stroke();
+        context.closePath();
+    }
+}
