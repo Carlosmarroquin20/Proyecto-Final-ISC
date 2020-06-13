@@ -10,3 +10,16 @@ canvas {
     height: 500px;
     background: #262626;
 }
+
+#info {
+    color: #FFF;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    margin: 50px 10px 0;
+    padding: 8px;
+    background: #161616;
+    position: absolute;
+    z-index: 1;
+    height: 485px;
+    width: 260px;
+    
+}
