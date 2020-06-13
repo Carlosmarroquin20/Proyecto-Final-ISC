@@ -3,3 +3,5 @@ usuario no lo reconocio y por tanto no aparece en los commits.
 
 Su usuario es Frnn4268 y en el proyecto aparece como "unknow", pero si realizo
 su trabajo completo.
+
+Si las paginas le generan un problema debe ser por el movimiento de las carpetas de laragon.
