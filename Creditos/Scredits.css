@@ -2,8 +2,16 @@
 html {
 	height: 100%;
 	font: 62.5%/1 "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
-	background-image: url("C:/Users/USUARIO/Desktop/Trabajo_Colaborativo/img/creditos.gif");
+	background-image: url("C:/laragon/www/Final-Project-ISC/img/creditos.gif");
 	background-size: 100%;
+  }
+/*Creacion del estilo para el body*/
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
   }
 
 
