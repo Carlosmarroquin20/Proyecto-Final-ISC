@@ -964,3 +964,24 @@ function renderAsteroids()
         context.closePath();
     }
 }
+
+function renderScanlines()
+{
+    //inverso para loop = más rendimiento.
+
+    var i = hScan;
+
+    context.globalAlpha = 0.05;
+    context.lineWidth = 1;
+
+    for(i; i > -1; --i)
+    {
+        context.beginPath();
+        context.moveTo(0, i * 4);
+        context.lineTo(screenWidth, i * 4);
+        context.strokeStyle = (Math.random() > 0.0001) ? '#FFF' : '#222';
+        context.stroke();
+    }
+
+    context.globalAlpha = 1;
+}
