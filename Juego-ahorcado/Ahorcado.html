@@ -124,6 +124,30 @@
             ctx.fillRect(this.x, this.y, this.ancho, this.alto);
             ctx.strokeRect(this.x, this.y, this.ancho, this.alto);
         }   
+       ///Pista para el usuario (Funcion)///
+       function pistaFunction(palabra){
+            let pista = ""; //Variable para dar pistas
+            switch(palabra){  //Switch para la ordenacion de las pistas segun la pregunta
+                case 'LEON':   //Case individual para cada palabra
+                    pista = "Ruge y es fuerte";
+                    break;     //Break para cada funsion
+                case 'CABALLO':
+                    pista = "Hay de tierra y hay de mar";
+                    break;
+                case 'PERRO':
+                    pista = "El mejor amigo del hombre";
+                    break;
+                case "GATO":
+                    pista = "Son tiernos pero arañan";
+                    break;
+                case "LAGARTIJA":
+                    pista = "Son mas pequeñas que sus parientes los lagartos";
+                    break;
+                case "RINOCERONTE":
+                    pista = "Tienen un gran cuerno encima de su ocico";
+                break;
+                case "TIBURON":
+                    pista = "Son los reyes del mar";
 </script>
 </body>
 
