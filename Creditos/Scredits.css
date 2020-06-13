@@ -13,6 +13,15 @@ body {
 	justify-content: center;
 	align-items: center;
   }
+/*Creacion del estilo para el wrapper*/
+#wrapper {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 10em;
+	padding: 50px 0;
+	margin: 0;
+  }
 
 
 
