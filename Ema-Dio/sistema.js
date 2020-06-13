@@ -321,5 +321,49 @@ var Ship = (function()
         return obj;
     };
 
+    //Definicion:
 
+    var def =
+    {
+        angle: null,
+        pos: null,
+        vel: null,
+        thrust: null,
+        ref: null,
+        bulletDelay: null,
+        idle: null,
+        radius: null,
+
+        update: function()
+        {
+            this.vel.add(this.thrust);
+            this.pos.add(this.vel);
+
+            if(this.vel.getLength() > 5) this.vel.setLength(5);
+
+            ++this.bulletDelay;
+
+            if(this.idle)
+            {
+                if(++this.idleDelay > 120)
+                {
+                    this.idleDelay = 0;
+                    this.idle = false;
+
+                    this.ref.resetGame();
+                }
+            }
+        },
+
+        shoot: function()
+        {
+            if(this.bulletDelay > 8)
+            {
+                this.ref.generateShot();
+                this.bulletDelay = 0;
+            }
+        }
+    };
+
+    return {create:create};    
 }());
