@@ -171,5 +171,37 @@ var Particle = (function()
         return obj;
     };
 
+    //Definicion:
 
+    var def =
+    {
+        radius: null,
+        color: null,
+        lifeSpan: null,
+        fric: null,
+        pos: null,
+        vel: null,
+        blacklisted: null,
+
+        update: function()
+        {
+            this.pos.add(this.vel);
+            this.vel.mul(this.fric);
+            this.radius -= 0.1;
+
+            if(this.radius < 0.1) this.radius = 0.1;
+
+            if(this.lifeSpan-- < 0)
+            {
+                this.blacklisted = true;
+            }
+        },
+
+        reset: function()
+        {
+            this.blacklisted = false;
+        }
+    };
+
+    return {create:create};
 }());
