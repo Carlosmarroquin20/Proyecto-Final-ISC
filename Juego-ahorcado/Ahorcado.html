@@ -181,6 +181,34 @@
             ctx.font = "bold 20px Courier";  //Tipo y tamaño de letra
             ctx.fillText(pista, 10, 15);  //Variable pista
         }
+       /*Distribucion del teclado con sus letras respectivas al acomodo de nuestro array*/
+       function teclado(){
+            var ren = 0;
+            var col = 0;
+            var letra = "";
+            var miLetra;
+            var x = inicioX;
+            var y = inicioY;
+            for(var i = 0; i < letras.length; i++){
+                letra = letras.substr(i,1);
+                miLetra = new Tecla(x, y, lon, lon, letra);
+                miLetra.dibuja();
+                teclas_array.push(miLetra);
+                x += lon + margen;
+                col++;
+                if(col==10){
+                    col = 0;
+                    ren++;
+                    if(ren==2){
+                        x = 280;
+                    } else {
+                        x = inicioX;
+                    }
+                }
+                y = inicioY + ren * 50;
+            }
+        }
+             
 </script>
 </body>
 
