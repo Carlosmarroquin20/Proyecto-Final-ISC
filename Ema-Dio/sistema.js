@@ -821,3 +821,25 @@ function destroyAsteroid(asteroid)
     generateAsteroidExplosion(asteroid);
     resolveAsteroidType(asteroid);
 }
+
+function generateAsteroidExplosion(asteroid)
+{
+    var i = 18;
+
+    for(i; i > -1; --i)
+    {
+        var p = particlePool.getElement();
+
+        //si el grupo de partículas no tiene más elementos, devolverá 'nulo'.
+
+        if(!p) return;
+
+        p.radius = Math.random() * (asteroid.radius >> 2) + 2;
+        p.lifeSpan = 80;
+        p.color = '#07ff3c'; 
+        p.vel.setLength(20 / p.radius);
+        p.vel.setAngle(ship.angle + (1 - Math.random() * 5) * doublePI);
+        p.pos.setXY(asteroid.pos.getX() + Math.cos(p.vel.getAngle()) * (asteroid.radius * 0.10), asteroid.pos.getY() + Math.sin(p.vel.getAngle()) * (asteroid.radius * 0.8));
+        particles[particles.length] = p;
+    }
+}
