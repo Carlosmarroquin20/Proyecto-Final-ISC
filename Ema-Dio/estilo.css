@@ -23,3 +23,14 @@ canvas {
     width: 260px;
     
 }
+
+#info p {
+    font-size: 18px;
+}
+h1 {
+font-size: 42px;
+position: absolute;
+color: white;
+left: 445px;
+font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
