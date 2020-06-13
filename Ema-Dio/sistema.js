@@ -539,3 +539,40 @@ function keyboardInit()
     e.preventDefault();
     };
 }
+
+function particleInit()
+{
+    particlePool = Pool.create(Particle, 100);
+    particles = [];
+}
+
+function bulletInit()
+{
+    bulletPool = Pool.create(Bullet, 40);
+    bullets = [];
+}
+
+function asteroidInit()
+{
+    asteroidPool = Pool.create(Asteroid, 30);
+    asteroids = [];
+}
+
+function shipInit()
+{
+    ship = Ship.create(screenWidth >> 1, screenHeight >> 1, this);
+}
+
+function loop()
+{
+    updateShip();
+    updateParticles();
+    updateBullets();
+    updateAsteroids();
+
+    checkCollisions();
+
+    render();
+
+    getAnimationFrame(loop);
+}
