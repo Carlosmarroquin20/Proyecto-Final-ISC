@@ -377,3 +377,54 @@ var context;
 var screenWidth;
 var screenHeight;
 var doublePI = Math.PI * 2;
+
+//variables del juego
+
+var ship;
+
+var particlePool;
+var particles;
+
+var bulletPool;
+var bullets;
+
+var asteroidPool;
+var asteroids;
+
+var hScan;
+var asteroidVelFactor = 0;
+
+//variables del teclado
+
+var keyLeft = false;
+var keyUp = false;
+var keyRight = false;
+var keyDown = false;
+var keySpace = false;
+
+window.getAnimationFrame =
+window.requestAnimationFrame ||
+window.webkitRequestAnimationFrame ||
+window.mozRequestAnimationFrame ||
+window.oRequestAnimationFrame ||
+window.msRequestAnimationFrame ||
+function(callback)
+{
+    window.setTimeout(callback, 16.6);
+};
+
+window.onload = function()
+{
+    canvas = document.getElementById('canvas');
+    context = canvas.getContext('2d');
+
+    window.onresize();
+
+    keyboardInit();
+    particleInit();
+    bulletInit();
+    asteroidInit();
+    shipInit();
+
+    loop();
+};
