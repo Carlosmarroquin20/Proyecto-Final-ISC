@@ -624,3 +624,25 @@ function generateThrustParticle()
     p.vel.mul(-1);
     particles[particles.length] = p;
 }
+
+function updateParticles()
+{
+    var i = particles.length - 1;
+
+    for(i; i > -1; --i)
+    {
+        var p = particles[i];
+
+        if(p.blacklisted)
+        {
+            p.reset();
+
+            particles.splice(particles.indexOf(p), 1);
+            particlePool.disposeElement(p);
+
+            continue;
+        }
+
+        p.update();
+    }
+}
