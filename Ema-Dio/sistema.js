@@ -155,5 +155,21 @@ var Vec2D = (function()
 
 var Particle = (function()
 {
+    //metodos Expuestos:
+
+    var create = function()
+    {
+        var obj = Object.create(def);
+        obj.radius = 2;
+        obj.color = '#FFF';
+        obj.lifeSpan = 0;
+        obj.fric = 0.98;
+        obj.pos = Vec2D.create(0, 0);
+        obj.vel = Vec2D.create(0, 0);
+        obj.blacklisted = false;
+
+        return obj;
+    };
+
 
 }());
