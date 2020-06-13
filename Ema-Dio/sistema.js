@@ -51,3 +51,10 @@ var Pool = (function()
     return {create:create};
 
 }());
+
+//vec2d.js ...........................................................
+
+var Vec2D = (function()
+{
+   
+}());
