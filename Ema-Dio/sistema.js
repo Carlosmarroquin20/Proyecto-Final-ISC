@@ -367,3 +367,13 @@ var Ship = (function()
 
     return {create:create};    
 }());
+
+//canvas ...........................................................
+
+//variables comunes
+
+var canvas;
+var context;
+var screenWidth;
+var screenHeight;
+var doublePI = Math.PI * 2;
