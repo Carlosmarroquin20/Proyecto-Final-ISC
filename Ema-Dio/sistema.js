@@ -934,3 +934,33 @@ function renderBullets()
         context.closePath();
     }
 }
+
+function renderAsteroids()
+{
+    //inverso para loop = más rendimiento.
+
+    var i = asteroids.length - 1;
+
+    for(i; i > -1; --i)
+    {
+        var a = asteroids[i];
+
+        context.beginPath();
+        context.lineWidth = (Math.random() > 0.2) ? 4 : 3;
+        context.strokeStyle = a.color;
+
+        var j = a.sides;
+
+        context.moveTo((a.pos.getX() + Math.cos(doublePI * (j / a.sides) + a.angle) * a.radius) >> 0, (a.pos.getY() + Math.sin(doublePI * (j / a.sides) + a.angle) * a.radius) >> 0);
+
+        for(j; j > -1; --j)
+        {
+            context.lineTo((a.pos.getX() + Math.cos(doublePI * (j / a.sides) + a.angle) * a.radius) >> 0, (a.pos.getY() + Math.sin(doublePI * (j / a.sides) + a.angle) * a.radius) >> 0);
+            
+        }
+
+        if(Math.random() > 0.2) context.stroke();
+        
+        context.closePath();
+    }
+}
