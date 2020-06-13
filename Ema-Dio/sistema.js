@@ -674,3 +674,38 @@ function updateBullets()
         else if(b.pos.getY() < 0) b.blacklisted = true;
     }
 }
+
+function updateAsteroids()
+{
+    var i = asteroids.length - 1;
+
+    for(i; i > -1; --i)
+    {
+        var a = asteroids[i];
+
+        if(a.blacklisted)
+        {
+            a.reset();
+
+            asteroids.splice(asteroids.indexOf(a), 1);
+            asteroidPool.disposeElement(a);
+
+            continue;
+        }
+
+        a.update();
+
+        if(a.pos.getX() > screenWidth + a.radius) a.pos.setX(-a.radius);
+        else if(a.pos.getX() < -a.radius) a.pos.setX(screenWidth + a.radius);
+
+        if(a.pos.getY() > screenHeight + a.radius) a.pos.setY(-a.radius);
+        else if(a.pos.getY() < -a.radius) a.pos.setY(screenHeight + a.radius);
+    }
+
+    if(asteroids.length < 10)
+    {
+        var factor = (Math.random() * 2) >> 0;
+
+        generateAsteroid(screenWidth * factor, screenHeight * factor, 60 , 'b');
+    }
+}
