@@ -22,7 +22,11 @@ body {
 	padding: 50px 0;
 	margin: 0;
   }
-
+/*Craecion del estilo para el span*/ 
+span { 
+	text-shadow: -0.06em 0 red,  0.06em 0 cyan; /* This creates the 3D effect, pretty easy, eh? */
+	letter-spacing: 0.08em; /* make sure the letters don't overlap */
+  }
 
 
 
