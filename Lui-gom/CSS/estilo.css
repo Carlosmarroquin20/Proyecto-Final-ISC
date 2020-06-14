@@ -53,7 +53,7 @@ body { background-color: #000; }
 h1 {
 font-size: 42px;
 position: absolute;
-color: white;
+color: rgb(37, 193, 204);
 left: 445px;
 font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
@@ -65,3 +65,26 @@ left: 940px;
 top: 30px;
 
 }
+#salir p {
+    position: relative;
+    top: 140px;
+
+    justify-content: left;
+    align-items: left;
+    height: 100px;
+    width: left;
+    background-size: auto;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px;
+	}
+	.btn-neon{
+	position: relative;
+	padding: 10px 30px;
+	color: rgb(0, 0, 0);
+	letter-spacing: 3px;
+	text-decoration: none;
+	font-size: 20px;
+	transition: 0.5s;
+	background-color: rgb(194, 181, 0);
+	}
+	
