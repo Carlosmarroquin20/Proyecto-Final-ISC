@@ -68,25 +68,23 @@ top: 30px;
 #salir p {
     position: relative;
     top: 140px;
-    display: flex;
+
     justify-content: left;
     align-items: left;
     height: 100px;
     width: left;
     background-size: auto;
     font-family: 'Courier New', Courier, monospace;
-    margin: 40px;
+    margin: 50px;
 	}
 	.btn-neon{
 	position: relative;
-	display: inline-block;
 	padding: 10px 30px;
 	color: rgb(0, 0, 0);
 	letter-spacing: 3px;
 	text-decoration: none;
 	font-size: 20px;
-	overflow: hidden;
 	transition: 0.5s;
-	background-color: rgb(0, 206, 110);
+	background-color: rgb(194, 181, 0);
 	}
 	
